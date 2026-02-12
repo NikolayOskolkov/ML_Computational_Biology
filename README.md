@@ -7,7 +7,7 @@
 - Dr. Nikolay Oskolkov, Metabolic Research Group Leader, LIOS, Riga, Latvia
 
 ## Course overview
-provides a comprehensive introduction to machine learning techniques in computational biology, focusing on both theoretical knowledge and practical coding skills in R and Python. Participants will learn to implement from scratch and optimize algorithms such as neural networks, random forest, k-means clustering, and Markov Chain Monte Carlo (MCMC), making it an essential resource for advancing research in biostatistics, genetics, and data science. 
+The course provides a comprehensive introduction to machine learning techniques in computational biology, focusing on both theoretical knowledge and practical coding skills in R and Python. Participants will learn to implement from scratch and optimize algorithms such as neural networks, random forest, k-means clustering, and Markov Chain Monte Carlo (MCMC), making it an essential resource for advancing research in biostatistics, genetics, and data science. 
 
 ## Target audience and assumed background
 We assume some basic awareness of UNIX environment, as well as at least beginner level of R and / or Python programming.
