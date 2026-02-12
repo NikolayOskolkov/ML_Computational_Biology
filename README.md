@@ -1,14 +1,13 @@
 ![](course_logo.png)
 
-# R Programming for Statistics and Machine Learning
+# Machine Learning for Computational Biology
 
 ## Instructors
 
 - Dr. Nikolay Oskolkov, Metabolic Research Group Leader, LIOS, Riga, Latvia
-- Dr. Daniel Rivas, postdoctoral fellow in Metabolic Research Group, LIOS, Riga, Latvia
 
 ## Course overview
-This course is designed for participants who are at beginner-level or have basic familiarity with R and are ready to advance their programming and computational data-analysis skills. Building on foundational R concepts, the course emphasizes implementing core statistical and machine-learning algorithms from scratch. Alongside deeper coverage of data structures, programming paradigms and functional programming, participants will explore practical applications in bioinformatics. Students will progress from fundamental programming concepts to implementing key analytical tools, including non-parametric and permutation-based statistical tests, linear mixed models (LMMs), dimensionality reduction (PCA, tSNE, UMAP) and clustering algorithms (e.g., k-means), random forests, and simple neural networks directly in base R. 
+provides a comprehensive introduction to machine learning techniques in computational biology, focusing on both theoretical knowledge and practical coding skills in R and Python. Participants will learn to implement from scratch and optimize algorithms such as neural networks, random forest, k-means clustering, and Markov Chain Monte Carlo (MCMC), making it an essential resource for advancing research in biostatistics, genetics, and data science. 
 
 ## Target audience and assumed background
 We assume some basic awareness of UNIX environment, as well as at least beginner level of R and / or Python programming.
@@ -67,28 +66,4 @@ By completing this course, you will:
 | 10.30 - 11.30  | Lecture: unsupervised learning, non-linear dimension reduction, tSNE, UMAP                 | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/slides/Lecture5_NonLinearDimensionReduction.pdf)                                                                     |
 | 11.30 - 12.30  | Lunch                                                                                      |                                                                                                                    |
 | 12.30 - 14.00  | Practical: comparing dimensionality reduction techniques on MNIST dataset                  | [Lab](https://html-preview.github.io/?url=https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/blob/main/practicals/DimensionReduction.html)
-
-
-## Day 4: 9.00 - 14.00 Riga time
-
-| Time           | Activity                                                         | Link                                                                                                                                        |
-|----------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| 09.00 - 10.00  | Lecture: unsupervised learning, hierarchical and partitioning clustering in R              | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/slides/Lecture6_BasicClustering.pdf)                                                                                |
-| 10.00 - 10.30  | Break                                                                                      |                                                                                                                    |
-| 10.30 - 11.30  | Lecture: unsupervised learning, spectral, density- and graph-based clustering              | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/slides/Lecture7_AdvancedClustering.pdf)                                                                                |
-| 11.30 - 12.30  | Lunch                                                                                      |                                                                                                                    |
-| 12.30 - 14.00  | Practical: comparing clustering algorithms on spherical and moon-like clusters             | [Lab](https://html-preview.github.io/?url=https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/blob/main/practicals/Clustering_Lab.html)
-
-
-
-## Day 5: 9.00 - 14.00 Riga time
-
-| Time           | Activity                                                         | Link                                                                                                                                        |
-|----------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| 09.00 - 10.00  | Lecture: non-linear machine learning in R, neural networks and backpropagation                 | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/slides/Lecture8_NeuralNetworks.pdf)                                                                                  |
-| 10.00 - 10.30  | Break                                                                                      |                                                                                                                    |
-| 10.30 - 11.30  | Lecture: non-linear machine learning in R, decision tree and random forest                 | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/slides/Lecture9_RandomForest.pdf)                                                                                    |
-| 11.30 - 12.30  | Lunch                                                                                      |                                                                                                                    |
-| 12.30 - 14.00  | Practical: coding a vanilla neural network from scratch in R on a toy dataset              | [Lab](https://html-preview.github.io/?url=https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/blob/main/practicals/ANNFromScratch_R.html)
-| 12.30 - 14.00  | Bonus practical: comparing linear and non-linear machine learning algorithms               | [Lab](https://html-preview.github.io/?url=https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/blob/main/practicals/Lab_MachineLearning.html)
 
