@@ -1,0 +1,199 @@
+---
+title: "Basic and advanced clustering algorithms"
+author: "Nikolay Oskolkov, Metabolic Research Group leader, LIOS, nikolay.oskolkov@osi.lv"
+date: "February 8, 2026"
+output:
+  html_document:
+    toc: yes
+  pdf_document:
+    toc: yes
+subtitle: Riga, Latvia
+abstract: |
+  In this tutorial, we will implement a few basic and advanced clustering algorithms such as hierarchical clustering, particioning clustering (k-means and Gaussian Mixture Model), spectral clustering, density-based clusetring (DBSCAN) and graph-based clustering (Luivain and Leiden).
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Basic clustering algorithms
+
+Hierarchical clustering is an unsupervised learning method that groups data points into clusters by building a tree-like structure called a dendrogram. Instead of choosing the number of clusters upfront, it shows how data naturally merge (or split) at different levels of similarity.
+
+There are two main approaches:
+
+* Agglomerative (bottom-up): start with each point as its own cluster and repeatedly merge the closest clusters.
+
+* Divisive (top-down): start with all points in one cluster and recursively split them.
+
+Clusters are formed based on a distance metric (like Euclidean distance) and a linkage method (such as single, complete, or average linkage). You can “cut” the dendrogram at any height to get the desired number of clusters.
+
+Let us simulate a simple toy dataset and demonstrate how to compute hierarchical clustering on this dataset:
+
+```{r simulated dataset}
+df <- data.frame(x = c(0, 5, 2, 12, 6, 8, 7), y = c(0, 3, 5, 3, 8, 9, 9))
+df
+plot(y ~ x, data = df, pch = 16, cex = 5, col = 2:8, xaxt="n", yaxt="n")
+axis(1, at = seq(0, 12, by = 1)); axis(2, at = seq(0, 9, by = 1))
+abline(h = 0:9, v = 0:12, lty = 1, col = "lightgrey")
+points(y ~ x, data = df, pch = 16, cex = 5, col = 2:8)
+points(y ~ x, data = df, pch = as.character(1:7))
+```
+
+Now let us compute the matrix of pairwise distances and hierarchcial dendrogram on the toy dataset:
+
+```{r hierachical clustering}
+dist(df)
+clusters <- hclust(dist(df))
+plot(as.dendrogram(clusters), ylab = "Euclidean distance")
+```
+
+## Partitioning clustering (k-means)
+
+Partitioning k-means clustering is an unsupervised learning algorithm that divides data into k distinct, non-overlapping clusters, where k is chosen in advance. Each cluster is represented by a centroid (the mean of its points).
+
+The algorithm works by:
+
+1. Initializing k centroids,
+
+2. Assigning each data point to the nearest centroid,
+
+3. Updating centroids based on current assignments,
+
+4. Repeating until the clusters stabilize.
+
+K-means aims to minimize within-cluster variance, making clusters compact and well separated. It’s fast and scalable, but sensitive to the choice of k, initial centroids, and outliers, and it works best with roughly spherical clusters of similar size.
+
+Let us start with a simulating a toy dataset with 3 clusters drawn from multivariate normal distribution:
+
+```{r simulate three clusters}
+library("MASS")
+
+set.seed(123)
+
+data1 <- as.data.frame(mvrnorm(n = 100, mu = c(-1, 0), Sigma=matrix(c(1, 0, 0, 1), ncol = 2)))
+data2 <- as.data.frame(mvrnorm(n = 100, mu = c(3, -1), Sigma=matrix(c(1, 0, 0, 1), ncol = 2)))
+data3 <- as.data.frame(mvrnorm(n = 100, mu = c(0, 3), Sigma=matrix(c(1, 0, 0, 1), ncol = 2)))
+data<-rbind(data1, data2, data3)
+head(data)
+plot(data, xlab = "X", ylab = "Y", pch = 19)
+```
+
+Let us implement k-means from scratch in plain R, and apply it to the simulated dataset:
+
+```{r kmeans}
+par(mfrow=c(2, 2))
+K <- 3
+set.seed(123)
+centers <- data[sample(1:dim(data)[1], K), ]
+plot(data, xlab = "X", ylab = "Y", pch = 19)
+points(centers, col="blue", cex = 3, pch = 19)
+for(t in 1:3)
+{
+my_labels <- vector()
+for(i in 1:dim(data)[1])
+{
+  my_dist <- vector()
+  for(j in 1:K)
+  {
+    my_dist[j] <- sqrt((data[i, 1] - centers[j, 1])^2 + (data[i, 2] - centers[j, 2])^2)
+  }
+  my_labels[i] <- which.min(my_dist)
+}
+plot(data, xlab = "X", ylab = "Y", pch = 19)
+points(data, col = my_labels, pch = 19)
+points(centers, col = "blue", cex = 3, pch = 19)
+
+new_centers <- list()
+for(i in unique(my_labels))
+{
+  new_centers[[i]] <- colMeans(data[my_labels == i,])
+}
+centers <- Reduce("rbind", new_centers)
+}
+```
+
+We can see that the k-means algorithm has almost converged already after 3 iterations.
+
+## Spectral clustering and graph Laplacian
+
+Spectral clustering is an unsupervised learning method that groups data using the eigenstructure of a similarity graph, rather than relying directly on distances in the original feature space. It’s especially powerful for finding non-linear or non-convex clusters.
+
+The method works by:
+
+1. Constructing a similarity graph between data points,
+
+2. Computing the graph Laplacian,
+
+3. Extracting a few of its smallest eigenvectors,
+
+4. Running a standard clustering algorithm (often k-means) on this low-dimensional embedding.
+
+Spectral clustering can uncover complex cluster shapes that methods like k-means struggle with, but it is computationally expensive and requires choosing how to build the similarity graph and the number of clusters.
+
+```{r non-sperical clusters}
+# Data generation
+library("dbscan"); data("moons")
+head(moons)
+plot(moons, pch=19, cex = 2)
+```
+
+Now we will apply k-means to the moon-like clusetrs and demostrate that it fails:
+
+```{r kmeans non-sperical clusters}
+# K-means clustering
+kmeans_clusters <- kmeans(moons, centers = 4, iter.max = 10000)
+kmeans_clusters
+plot(moons, pch=19, cex = 2)
+points(moons, pch=19, cex = 2, col = kmeans_clusters$cluster)
+```
+
+Now we will use kernlab and the spectral clustering method that can resolve the moon-like structure:
+
+```{r spectral non-sperical clusters}
+# Spectral clustering (Graph Laplacian)
+set.seed(123)
+library("kernlab")
+sc <- specc(as.matrix(moons), centers = 4, iterations = 100000)
+sc
+plot(moons, pch=19, cex = 2); points(moons, pch=19, cex = 2, col = sc)
+```
+
+## Density-based DBSCAN clustering
+
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is an unsupervised clustering algorithm that groups points based on density rather than distance to a centroid. It’s especially good for arbitrary-shaped clusters and handling noise/outliers.
+
+Key ideas:
+
+* Core points: Points with at least minPts neighbors within radius ε.
+
+* Border points: Points within ε of a core point but with fewer than minPts neighbors.
+
+* Noise points: Points that are neither core nor border points.
+
+How it works:
+
+1. Start from an unvisited point.
+
+2. If it’s a core point, grow a cluster by recursively adding all density-reachable points.
+
+3. Repeat until all points are visited.
+
+DBSCAN does not require specifying the number of clusters, can detect non-linear shapes, and naturally identifies outliers. Its performance depends on choosing ε and minPts carefully.
+
+Here we will aply DBSCAN to the same simulated moon-like clusters:
+
+```{r dbscan non-sperical clusters}
+# Data generation
+library("dbscan")
+data("moons")
+head(moons)
+plot(moons, pch=19, cex = 2)
+
+# DBSCAN clustering
+dbscan_clusters<-dbscan(moons, minPts = 5, eps = 0.4)
+dbscan_clusters
+points(moons, pch=19, cex = 2, col = dbscan_clusters$cluster)
+```
+
+We can see that DBSCAN can nicely detect all four clusters.
