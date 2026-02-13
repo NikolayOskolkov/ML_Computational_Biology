@@ -30,40 +30,40 @@ By completing this course, you will:
 |--------|-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ~ 1 h  | In case needed: Recap on Unix                                                                    | [Lab](command-line-basics.md)                                                                                                                           |
 | ~ 0.5 h  | R cheatsheet                                                                                   | [Blog](https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf)                                                                                                  |
-| ~ 0.5 h  | Refresh basic R skills (part1): Rstudio, data types, reading and writing to file               | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/precourse_material/slides/D01.pdf)                                                                                                    |
-| ~ 0.5 h  | Refresh basic R skills (part2): conditionals, loops and functions                              | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/precourse_material/slides/D02.pdf)                                                                                                    |
-| ~ 0.5 h  | Refresh basic R skills (part3): graphics and visualization, base R vs. ggplot                  | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/precourse_material/slides/D03.pdf)                                                                                                    |
+| ~ 0.5 h  | Refresh basic R skills (part1): Rstudio, data types, reading and writing to file               | [Slides](https://github.com/NikolayOskolkov/ML_Computational_Biology/raw/main/precourse_material/slides/D01.pdf)                                                                                                    |
+| ~ 0.5 h  | Refresh basic R skills (part2): conditionals, loops and functions                              | [Slides](https://github.com/NikolayOskolkov/ML_Computational_Biology/raw/main/precourse_material/slides/D02.pdf)                                                                                                    |
+| ~ 0.5 h  | Refresh basic R skills (part3): graphics and visualization, base R vs. ggplot                  | [Slides](https://github.com/NikolayOskolkov/ML_Computational_Biology/raw/main/precourse_material/slides/D03.pdf)                                                                                                    |
 
 
-## Day 1: 9.00 - 14.00 Riga time
+## Day 1: 9.00 - 13.00 Italy time
 
 | Time           | Activity                                                          | Link                                                                                                                                        |
 |----------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| 09.00 - 10.00  | Introduction to statistical analysis in R: Frequentist vs. Bayesian approaches             | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/slides/Lecture1_IntroStatistics.pdf)                                                                                 |
+| 09.00 - 10.00  | Introduction to statistical analysis in R: Frequentist vs. Bayesian approaches             | [Slides](https://github.com/NikolayOskolkov/ML_Computational_Biology/raw/main/slides/ML_CompBiology_AFI_Oskolkov_session1.pdf)                                                                                 |
 | 10.00 - 10.30  | Break                                                                                      |                                                                                                                   |
-| 10.30 - 11.30  | Practical: comparing parametric and non-parametric tests in R                              | [Lab](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/practicals/Practical1_permutation_test.pdf)  |
+| 10.30 - 11.30  | Practical: comparing parametric and non-parametric tests in R                              | [Lab](https://github.com/NikolayOskolkov/ML_Computational_Biology/raw/main/practicals/Practical1_permutation_test.pdf)  |
 | 11.30 - 12.30  | Lunch                                                                                      |                                                                                                                   |
-| 12.30 - 14.00  | Introduction to machine learning in R: linear model and gradient descent                   | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/slides/Lecture2_IntroMachineLearning.pdf)                                                                                                                                                                                                                     |
+| 12.30 - 14.00  | Introduction to machine learning in R: linear model and gradient descent                   | [Slides](https://github.com/NikolayOskolkov/ML_Computational_Biology/raw/main/slides/ML_CompBiology_AFI_Oskolkov_session2.pdf)                                                                                                                                                                                                                     |
 
 
-## Day 2: 9.00 - 14.00 Riga time
-
-| Time           | Activity                                                         | Link                                                                                                                                        |
-|----------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| 09.00 - 10.00  | Lecture: Univariate and multivariate feature selection in R: LASSO and PLS                 | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/slides/Lecture3_FeatureSelection.pdf)                                                                                |
-| 10.00 - 10.30  | Break                                                                                      |                                                                                                                    |
-| 10.30 - 11.30  | Practical: univariate feature selection (differential gene expression analysis)            | [Lab](https://html-preview.github.io/?url=https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/blob/main/practicals/FeatureSelection.html)                                                                             |
-| 11.30 - 12.30  | Lunch                                                                                      |                                                                                                                    |
-| 12.30 - 14.00  | Practical: multivariate feature selection: comparison between LASSO and PLS                | [Lab](https://html-preview.github.io/?url=https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/blob/main/practicals/FeatureSelection.html)
-
-
-## Day 3: 9.00 - 14.00 Riga time
+## Day 2: 9.00 - 13.00 Italy time
 
 | Time           | Activity                                                         | Link                                                                                                                                        |
 |----------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| 09.00 - 10.00  | Lecture: unsupervised learning, linear dimensionality reduction, PCA and MDS               | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/slides/Lecture4_LinearDimensionReduction.pdf)                                                                        |
+| 09.00 - 10.00  | Lecture: Univariate and multivariate feature selection in R: LASSO and PLS                 | [Slides](https://github.com/NikolayOskolkov/ML_Computational_Biology/raw/main/slides/ML_CompBiology_AFI_Oskolkov_session3.pdf)                                                                                |
 | 10.00 - 10.30  | Break                                                                                      |                                                                                                                    |
-| 10.30 - 11.30  | Lecture: unsupervised learning, non-linear dimension reduction, tSNE, UMAP                 | [Slides](https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/raw/main/slides/Lecture5_NonLinearDimensionReduction.pdf)                                                                     |
+| 10.30 - 11.30  | Practical: univariate feature selection (differential gene expression analysis)            | [Lab](https://html-preview.github.io/?url=https://github.com/NikolayOskolkov/ML_Computational_Biology/blob/main/practicals/FeatureSelection.html)                                                                             |
 | 11.30 - 12.30  | Lunch                                                                                      |                                                                                                                    |
-| 12.30 - 14.00  | Practical: comparing dimensionality reduction techniques on MNIST dataset                  | [Lab](https://html-preview.github.io/?url=https://github.com/NikolayOskolkov/R_course_TARGETWISE_2026/blob/main/practicals/DimensionReduction.html)
+| 12.30 - 14.00  | Practical: multivariate feature selection: comparison between LASSO and PLS                | [Lab](https://html-preview.github.io/?url=https://github.com/NikolayOskolkov/ML_Computational_Biology/blob/main/practicals/FeatureSelection.html)
+
+
+## Day 3: 9.00 - 13.00 Italy time
+
+| Time           | Activity                                                         | Link                                                                                                                                        |
+|----------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| 09.00 - 10.00  | Lecture: unsupervised learning, linear dimensionality reduction, PCA and MDS               | [Slides](https://github.com/NikolayOskolkov/ML_Computational_Biology/raw/main/slides/ML_CompBiology_AFI_Oskolkov_session4.pdf)                                                                        |
+| 10.00 - 10.30  | Break                                                                                      |                                                                                                                    |
+| 10.30 - 11.30  | Lecture: unsupervised learning, non-linear dimension reduction, tSNE, UMAP                 | [Slides](https://github.com/NikolayOskolkov/ML_Computational_Biology/raw/main/slides/ML_CompBiology_AFI_Oskolkov_session4.pdf)                                                                     |
+| 11.30 - 12.30  | Lunch                                                                                      |                                                                                                                    |
+| 12.30 - 14.00  | Practical: comparing dimensionality reduction techniques on MNIST dataset                  | [Lab](https://html-preview.github.io/?url=https://github.com/NikolayOskolkov/ML_Computational_Biology/blob/main/practicals/DimensionReduction.html)
 
