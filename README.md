@@ -30,9 +30,6 @@ By completing this course, you will:
 |--------|-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ~ 1 h  | In case needed: Recap on Unix                                                                    | [Lab](command-line-basics.md)                                                                                                                           |
 | ~ 0.5 h  | R cheatsheet                                                                                   | [Blog](https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf)                                                                                                  |
-| ~ 0.5 h  | Refresh basic R skills (part1): Rstudio, data types, reading and writing to file               | [Slides](https://github.com/NikolayOskolkov/ML_Computational_Biology/raw/main/precourse_material/slides/D01.pdf)                                                                                                    |
-| ~ 0.5 h  | Refresh basic R skills (part2): conditionals, loops and functions                              | [Slides](https://github.com/NikolayOskolkov/ML_Computational_Biology/raw/main/precourse_material/slides/D02.pdf)                                                                                                    |
-| ~ 0.5 h  | Refresh basic R skills (part3): graphics and visualization, base R vs. ggplot                  | [Slides](https://github.com/NikolayOskolkov/ML_Computational_Biology/raw/main/precourse_material/slides/D03.pdf)                                                                                                    |
 
 
 ## Day 1: 9.00 - 13.00 Italy time
